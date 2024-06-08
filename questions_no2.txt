@@ -1,0 +1,2 @@
+3.	What the pre migrations actions that needs to be performed.
+4.	How does the tool perform the migration, explain in detail.
