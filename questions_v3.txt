@@ -1,0 +1,4 @@
+What is a Terraform Module?
+In Terraform, a module is a powerful concept that allows us to achieve code reusability, we can maintain code better structure. Here's a breakdown of what modules are and how they work:
+- A module is a self-contained unit consisting of Terraform configuration files (.tf or .tf.json) typically located in a single directory.
+- It encapsulates a set of resources that work together to achieve a specific infrastructure purpose, such as creating a web server with its security group, storage, and network configuration.
