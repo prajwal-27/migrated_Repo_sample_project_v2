@@ -1,0 +1,2 @@
+1.	Can you draw parallels between terminologies/features in GitLab vs GitHub
+2.	What GitLab to GitHub migration tool have you used in the past.
