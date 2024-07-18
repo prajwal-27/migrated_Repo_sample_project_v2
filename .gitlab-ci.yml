@@ -18,7 +18,8 @@ variables:
     echo "We are learning gitlab session for extends keyword" 
     echo "Presenting by devops z+ tutorials"
 temp_job:
-  script: |
+  stage: test
+  script: 
     - echo "$CI_COMMIT_MESSAGE"
 
 build-job:       # This job runs in the build stage, which runs first.
@@ -28,13 +29,11 @@ build-job:       # This job runs in the build stage, which runs first.
     - echo "Compiling the code..."
     - echo "Compile complete."
     - echo "this is build job line added" >> questions.txt
-    
+
   artifacts:
     name: '$CI_JOB_ID'
     paths:
       [questions.txt]
-
-
 
 unit-test-job:   # This job runs in the test stage.
   stage: test
@@ -55,6 +54,8 @@ lint-test-job:   # This job also runs in the test stage.
     - echo "Linting code... This will take about 10 seconds."
     - sleep 10
     - echo "No lint issues found."
+    - echo "this is the Lint Test job added" >> questions.txt
+    - cat questions.txt
 
 deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
