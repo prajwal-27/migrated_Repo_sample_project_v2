@@ -7,7 +7,7 @@ stages:
   - deploy
 
 variables:
-  name : "Tom Cruise"
+  name1 : "Tom Cruise"
   email : "tom_cruise@gmail.com"
   id : 101
   USA : true
@@ -24,13 +24,9 @@ temp_job:
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   extends: .some_script
-  script: |
+  script: 
     - echo "Compiling the code..."
     - echo "Compile complete."
-    - echo "Hero Name: $name"
-    - echo "Hero email id: $email"
-    - echo "Hero ID: $id"
-    - echo "Hero Nation: $USA"
     - echo "this is build job line added" >> questions.txt
     
   artifacts:
