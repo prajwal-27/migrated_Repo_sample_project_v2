@@ -1,0 +1,88 @@
+name: CI
+'on':
+- push
+- pull_request
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    steps: []
+  stages:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run build
+      run: build
+    - name: Run test
+      run: test
+    - name: Run deploy
+      run: deploy
+  variables:
+    runs-on: ubuntu-latest
+    steps: []
+  .some_script:
+    runs-on: ubuntu-latest
+    steps: []
+  build-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run echo "Comp
+      run: echo "Compiling the code..."
+    - name: Run echo "Comp
+      run: echo "Compile complete."
+    - name: Run echo "Hero
+      run: echo "Hero name is $name1"
+    - name: Run echo "Hero
+      run: echo "Hero name is $email"
+    - name: Run echo "Hero
+      run: echo "Hero name is $id"
+    - name: Run echo "Hero
+      run: echo "Hero name is $USA"
+    - name: Run echo "this
+      run: echo "this is build job line added" >> questions.txt
+  temp_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run echo "$CI_
+      run: echo "$CI_COMMIT_MESSAGE"
+    - name: Run echo "$CI_
+      run: echo "$CI_COMMIT_BRANCH"
+    - name: Run echo "$CI_
+      run: echo "$CI_COMMIT_SHA"
+    - name: Run echo "$CI_
+      run: echo "$CI_JOB_ID"
+    - name: Run echo "$CI_
+      run: echo "$CI_PIPELINE_NAME"
+  unit-test-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run echo "Runn
+      run: echo "Running unit tests... This will take about 60 seconds."
+    - name: Run sleep 60
+      run: sleep 60
+    - name: Run echo "Code
+      run: echo "Code coverage is 90%"
+    - name: Run echo "This
+      run: echo "This job vairable - $test_job_var"
+    - name: Run echo "this
+      run: echo "this is the Test job added" >> questions.txt
+    - name: Run cat questi
+      run: cat questions.txt
+  lint-test-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run echo "Lint
+      run: echo "Linting code... This will take about 10 seconds."
+    - name: Run sleep 10
+      run: sleep 10
+    - name: Run echo "No l
+      run: echo "No lint issues found."
+    - name: Run echo "this
+      run: echo "this is the Lint Test job added" >> questions.txt
+    - name: Run cat questi
+      run: cat questions.txt
+  deploy-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run echo "Depl
+      run: echo "Deploying application..."
+    - name: Run echo "Appl
+      run: echo "Application successfully deployed."
